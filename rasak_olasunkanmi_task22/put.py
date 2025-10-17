@@ -14,15 +14,7 @@ class BasicAPI(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "application/json")
         self.end_headers()
         self.wfile.write(json.dumps(payload).encode())
-
-
-    # def do_GET(self):
-    #     """Return all data records."""
-    #     self.send_data({
-    #         "message": "Data retrieved successfully",
-    #         "data": data
-    #     })
-        
+              
     def do_PUT(self):
         """Handle PUT requests for updating data."""
         content_size = int(self.headers.get('Content-Length', 0))
