@@ -46,23 +46,5 @@ CREATE TABLE IF NOT EXISTS enrollments (
 );
 """)
 
-# create_courses = text("""
-# CREATE TABLE IF NOT EXISTS courses (
-#     id INT AUTO_INCREMENT PRIMARY KEY,
-#     title VARCHAR(100) NOT NULL,
-#     level VARCHAR(100) NOT NULL
-# );
-# """)
-
-# create_enrollments = text("""
-# CREATE TABLE IF NOT EXISTS enrollments (
-#     id INT AUTO_INCREMENT PRIMARY KEY,
-#     userId INT,
-#     courseId INT,
-#     FOREIGN KEY (userId) REFERENCES users(id),
-#     FOREIGN KEY (courseId) REFERENCES courses(id)
-# );
-# """)
-
 db.execute(create_table_query)
 print("Tables has been created successfully")
